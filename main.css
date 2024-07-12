@@ -1,0 +1,420 @@
+:root {
+    /* Define variáveis CSS para cores */
+    --color-white: #fff;
+    /* Branco */
+    --color-red: rgb(255, 0, 0);
+    /* Vermelho */
+    --color-blue: rgb(0, 0, 255);
+    /* Azul */
+    --color-blue2: rgb(47, 47, 207);
+    /* Azul alternativo */
+    --color-blue3: rgb(109, 165, 182);
+    /* Outro tom de azul */
+    --color-grey: rgb(44, 44, 44);
+}
+
+* {
+    /* Define o box model para incluir bordas e padding no cálculo de largura e altura */
+    box-sizing: border-box;
+    /* Remove padding e margem padrão de todos os elementos */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* Define a fonte padrão para o corpo do documento */
+    font-family: Arial;
+}
+
+.header-inner {
+    /* Define a largura máxima do cabeçalho */
+    max-width: 1300px;
+    /* Centraliza o cabeçalho horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    /* Define a cor de fundo da barra de navegação */
+    background-color: var(--color-blue3);
+    /* Define o padding interno da barra de navegação */
+    padding: 1rem;
+    /* Define a posição sticky para a barra de navegação */
+    position: sticky;
+    /* Posiciona a barra de navegação no topo da página */
+    top: 0;
+    /* Adiciona uma sombra à barra de navegação */
+    box-shadow: 10px 0 10px rgb(99, 211, 245);
+    /* Define a ordem de empilhamento da barra de navegação */
+    z-index: 99;
+}
+
+.navbar>div {
+    /* Define o layout flexível para o conteúdo da barra de navegação */
+    display: flex;
+    /* Alinha os itens verticalmente ao centro */
+    align-items: center;
+    /* Distribui o espaço restante entre os itens */
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.logo {
+    /* Define a cor do texto do logo */
+    color: var(--color-blue);
+    /* Define o layout flexível para o logo */
+    display: flex;
+    /* Alinha os itens do logo verticalmente ao centro */
+    align-items: center;
+}
+
+.logo span {
+    /* Define a cor do texto dentro do logo */
+    color: var(--color-white);
+}
+
+.logo img {
+    /* Define o layout flexível para a imagem do logo */
+    display: flex;
+    /* Alinha a imagem do logo verticalmente ao centro */
+    align-items: center;
+    /* Define a largura da imagem do logo */
+    width: 60px;
+    /* Altera o cursor para indicar que a imagem é clicável */
+    cursor: pointer;
+}
+
+nav ul {
+    /* Define o layout flexível para a lista de navegação */
+    display: flex;
+    /* Remove a lista padrão de estilo */
+    list-style: none;
+    /* Alinha os itens da lista verticalmente ao centro */
+    align-items: center;
+}
+
+.nav-icons {
+    /* Define o layout flexível para os ícones de navegação */
+    display: flex;
+    /* Alinha os ícones verticalmente ao centro */
+    align-items: center;
+}
+
+.nav-icons img {
+    /* Define a largura das imagens dos ícones de navegação */
+    width: 30px;
+    /* Altera o cursor para indicar que as imagens são clicáveis */
+    cursor: pointer;
+}
+
+.nav-icons img:first-child {
+    /* Adiciona uma margem à direita do primeiro ícone de navegação */
+    margin-right: 1rem;
+}
+
+nav ul li {
+    /* Define a cor do texto dos itens de navegação */
+    color: var(--color-white);
+    /* Adiciona uma margem à direita dos itens de navegação */
+    margin-right: 1.5rem;
+    /* Altera o cursor para indicar que os itens são clicáveis */
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    /* Move o item de navegação para cima ao passar o mouse */
+    transform: translateY(-5px);
+    /* Adiciona uma transição suave ao movimento */
+    transition: 500ms;
+    /* Define o peso da fonte como negrito */
+    font-weight: bold;
+}
+
+.menu-button {
+    /* Oculta o botão do menu */
+    display: none;
+}
+
+/* Estilização do cabeçalho */
+header {
+    /* Define a imagem de fundo do cabeçalho com um gradiente radial */
+    background-image: radial-gradient(#fff, #c7c7c7);
+}
+
+.header-bottom-side {
+    /* Define o layout flexível para a parte inferior do cabeçalho */
+    display: flex;
+    /* Alinha os itens verticalmente ao centro */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Define o padding interno */
+    padding: 1rem;
+}
+
+.header-bottom-side-left {
+    /* Define a altura para 100% */
+    height: 100%;
+    /* Define a base flexível para ocupar 50% do espaço disponível */
+    flex-basis: 50%;
+}
+
+.header-bottom-side-left h2 {
+    /* Define o tamanho da fonte dos títulos */
+    font-size: 3.2rem;
+    /* Adiciona uma margem inferior aos títulos */
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left p {
+    /* Define a altura da linha para os parágrafos */
+    line-height: 1.5rem;
+    /* Adiciona uma margem inferior aos parágrafos */
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left button {
+    /* Define a cor de fundo dos botões */
+    background-color: var(--color-blue);
+    /* Remove a borda dos botões */
+    border: none;
+    /* Altera o cursor para indicar que os botões são clicáveis */
+    cursor: pointer;
+    /* Define o padding interno dos botões */
+    padding: 0.8rem 3.8rem;
+    /* Arredonda as bordas dos botões */
+    border-radius: 9999px;
+    /* Define a cor do texto dos botões */
+    color: var(--color-white);
+    /* Define o peso da fonte dos botões */
+    font-weight: 500;
+    /* Define o tamanho da fonte dos botões */
+    font-size: 1rem;
+}
+
+.header-bottom-side-left button:hover {
+    /* Muda a cor de fundo dos botões ao passar o mouse */
+    background-color: var(--color-blue2);
+    /* Adiciona uma transição suave à mudança de cor */
+    transition: 500ms;
+}
+
+.header-bottom-side-right {
+    /* Define a base flexível para ocupar 50% do espaço disponível */
+    flex-basis: 50%;
+    /* Define o layout flexível para a parte direita do cabeçalho */
+    display: flex;
+    /* Alinha os itens verticalmente ao centro */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+}
+
+.header-bottom-side-rigth img {
+    /* Define a largura das imagens na parte direita do cabeçalho */
+    width: 550px;
+    /* Centraliza a imagem horizontalmente */
+    margin: 0 auto;
+    /* Arredonda as bordas da imagem */
+    border-radius: 20px;
+    /* Adiciona uma borda de 5 pixels em volta da imagem */
+    border: 5px solid var(--color-blue2);
+    /* Adiciona um padding interno à imagem */
+    padding: 8px;
+}
+
+/*começo da area de destaques*/
+
+.Destaques {
+    /* Define o layout flexível para a parte inferior do cabeçalho */
+    display: block;
+    padding: 1rem;
+
+}
+
+.Destaques h2 {
+    font-size: 2.2rem;
+    /* Adiciona uma margem inferior aos títulos */
+    margin-bottom: 1.5rem;
+}
+
+.Destaques p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.destaques-img ul {
+    display: block;
+    display: grid;
+    /* Define o layout das notícias como grid */
+    grid-template-columns: repeat(4, 24.25%);
+    /* Define a proporção das colunas como 32.6% cada, repetido 3 vezes */
+    column-gap: 1%;
+    /* Define um espaçamento entre as colunas de 1% */
+    row-gap: 5%;
+    /* Define um espaçamento entre as linhas de 5% */
+}
+
+.destaques-img ul li{
+    list-style: none;
+}
+
+.destaques-img ul li p {
+    font-size: 1rem;
+}
+
+.destaques-img button {
+    /* Define a cor de fundo dos botões */
+    background-color: var(--color-blue);
+    /* Remove a borda dos botões */
+    border: none;
+    /* Altera o cursor para indicar que os botões são clicáveis */
+    cursor: pointer;
+    /* Define o padding interno dos botões */
+    padding: 0.8rem 3.8rem;
+    /* Arredonda as bordas dos botões */
+    border-radius: 9999px;
+    /* Define a cor do texto dos botões */
+    color: var(--color-white);
+    /* Define o peso da fonte dos botões */
+    font-weight: 500;
+    /* Define o tamanho da fonte dos botões */
+    font-size: 1rem;
+    height: 4rem;
+}
+.destaques-img button:hover{
+    background-color: var(--color-blue2);
+    transition: 400ms;
+}
+
+.image-destaque {
+    width: 250px;
+    /* Define a largura das imagens em destaque */
+    height: 250px;
+    /* Define a altura das imagens em destaque */
+    object-fit: cover;
+    /* Faz com que as imagens preencham o contêiner mantendo a proporção */
+}
+
+.social-midia{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.social-midia img {
+    width: 34px;
+}
+
+.contato h2{
+    padding: 1rem;
+}
+
+.form-campo label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: .5rem;
+}
+
+.form-campo textarea {
+    resize: none;
+    height: 7.5rem;
+}
+
+form {
+    max-width: 22.5rem;
+    margin-left: 1rem;
+}
+
+.contato button {
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer; 
+    padding: .5rem 4rem;
+    align-items: center;
+}
+.contato button:hover{
+    background-color: var(--color-blue2);
+    transition: 400ms;
+}
+
+@media (max-width: 640px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .header-bottom-side {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .header-bottom-side-rigth img {
+        width: 300px;
+        right: 300px;
+    }
+
+    nav {
+        position: absolute;
+        background-color: var(--color-blue3);
+        width: 100%;
+        top: 70px;
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .destaques-img ul {
+        display: block;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .header-bottom-side {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .header-bottom-side-rigth img {
+        width: 500px;
+        right: 500px;
+    }
+
+    .destaques-img ul {
+        display: block;
+        display: grid;
+        /* Define o layout das notícias como grid */
+        grid-template-columns: repeat(2, 48%);
+        /* Define a proporção das colunas como 32.6% cada, repetido 3 vezes */
+        column-gap: 1%;
+        /* Define um espaçamento entre as colunas de 1% */
+        row-gap: 5%;
+        /* Define um espaçamento entre as linhas de 5% */
+    }
+
+}
